@@ -27,13 +27,13 @@ public class Animations : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Idle", true);
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            PlayerSpriteRenderer.flipX = true;
-        }
-        if(Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Horizontal") > 0.1f)
         {
             PlayerSpriteRenderer.flipX = false;
+        }
+        if (Input.GetAxis("Horizontal") < -0.1f)
+        {
+            PlayerSpriteRenderer.flipX = true;
         }
     }
 }
