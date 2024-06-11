@@ -25,12 +25,9 @@ public class Movement : MonoBehaviour
         Vector2 velocity = Vector2.zero;
         velocity.y = Input.GetAxis("Vertical") * speed;
         velocity.x = Input.GetAxis("Horizontal") * speed;
-        rb.velocity = velocity;
-        if (rb.velocity != Vector2.zero)
-        {
-            Moved?.Invoke();
-            StandUp();
-        }
+        if (!isLay) rb.velocity = velocity;
+        if (rb.velocity != Vector2.zero) Moved.Invoke();
+        if (isLay && velocity.x != 0 || isLay && velocity.y != 0) rb.velocity = velocity;
         if (Input.GetKey(KeyCode.Z))
         {
             LieDown();
