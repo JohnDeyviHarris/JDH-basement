@@ -4959,6 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.7
+  layonstart: 1
   MainSong: {fileID: 1194583797}
 --- !u!4 &1052362234
 Transform:
@@ -13103,7 +13104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1396068810}
   - component: {fileID: 1396068809}
-  - component: {fileID: 1396068812}
   - component: {fileID: 1396068811}
   m_Layer: 0
   m_Name: GoToPurpleLabirint
@@ -13181,24 +13181,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1396068808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e7e47ed391eb246aa3e4cac8483c03, type: 3}
+  m_Script: {fileID: 11500000, guid: 75558293e1295b0418b435d063b46f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinconf: {fileID: 1327271937}
-  confiner: {fileID: 1168105228}
---- !u!114 &1396068812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396068808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede5d67521790a942a09afcfab86ece6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TpPos: {fileID: 1582476607}
+  SceneName: SecondLVL
 --- !u!1 &1506999428
 GameObject:
   m_ObjectHideFlags: 0
