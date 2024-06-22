@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: JDG
   productName: "\u041F\u043E\u0434\u0432\u0430\u043B JDH"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
