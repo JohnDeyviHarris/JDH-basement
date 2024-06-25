@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Ambient : MonoBehaviour
 {
     public UnityEvent AmbientStart;
+    public UnityEvent AmbientEnd;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -13,9 +14,11 @@ public class Ambient : MonoBehaviour
             AmbientStart.Invoke();
         }
     }
-}
-
-public class JDHOMPEvent : UnityEvent<Animator, BoxCollider2D>
-{
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            AmbientEnd.Invoke();
+        }
+    }
 }
