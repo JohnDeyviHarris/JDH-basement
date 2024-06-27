@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private bool isLay = false;
     [SerializeField] private bool layonstart;
     [SerializeField] private AudioSource MainSong;
+    public bool ishide;
 
     public event Action Moved;
 

@@ -6,6 +6,7 @@ public class Brain : MonoBehaviour
 {
     [SerializeField] private List<Transform> Poses;
     private int todayPos = 1;
+    [SerializeField] private float distanceweneed;
     private Rigidbody2D rb;
     private void Start()
     {
@@ -14,7 +15,8 @@ public class Brain : MonoBehaviour
     private void FixedUpdate()
     {
         float distance = (Poses[todayPos].position - transform.position).magnitude;
-        if (distance < 0.5f)
+        print(distance);
+        if (distance < distanceweneed)
         {
             todayPos += 1;
             if (todayPos == Poses.Count) todayPos = 0;
