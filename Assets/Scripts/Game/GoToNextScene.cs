@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GoToNextScene : MonoBehaviour
 {
-    [SerializeField] private string SceneName;
+    [NaughtyAttributes.Scene] [SerializeField] private string SceneName;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(SceneName);
         } 
+    }
+    public void ChangeOFScene()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 }

@@ -32,10 +32,10 @@ public class Movement : MonoBehaviour
         velocity.x = Input.GetAxisRaw("Horizontal") * speed;
         if (!isLay) rb.velocity = velocity;
         if (velocity != Vector2.zero) Moved?.Invoke();
-        if (Input.GetKey(KeyCode.Z))
-        {
-            LieDown();
-        }
+        //if (Input.GetKey(KeyCode.Z))
+        //{
+        //    LieDown();
+        //}
     }
     public void LieDown()
     {

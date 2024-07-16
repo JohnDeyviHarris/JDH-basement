@@ -10,6 +10,7 @@ public class DialogeManager : MonoBehaviour
     [SerializeField] private float delay;
     [SerializeField] private AudioSource dialogMpThree;
     [SerializeField] private GameObject DialogeWindow;
+    private bool skip = false;
     private IEnumerator Playtext()
     {   
         DialogeWindow.SetActive(true);
@@ -21,10 +22,16 @@ public class DialogeManager : MonoBehaviour
                 DialogeText.text += bukva;
                 dialogMpThree.Play();
                 yield return new WaitForSeconds(0.1f);
-            }
-            yield return new WaitForSeconds(delay);
+                if (skip) break;
+            }   
+            if (skip) skip = false;
+            else yield return new WaitForSeconds(delay);
         }
         DialogeWindow?.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Z)) skip = true;
     }
     public void DialogeStart()
     {
